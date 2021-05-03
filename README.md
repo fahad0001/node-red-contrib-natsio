@@ -36,9 +36,8 @@ For gnatsd:
 - [x] |-Tabs
 - [x] |-Credentials: user and password
 - [ ] |-Credentials: token
-- [x] |-Don't crash on broker connection error (including node-red 
+- [x] |-Don't crash on broker connection error
 - [x] |-Dynamic Subject List as an Input Added
-starting)
 - [ ] |-security: TLS
 - [ ] |-Configurable reconnecting options
 - [ ] Improve documentation
