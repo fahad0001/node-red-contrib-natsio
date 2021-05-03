@@ -24,11 +24,11 @@
   "_spec": "node-red-contrib-natsio@0.6.1",
   "_where": "C:\\Users\\fahad\\.node-red",
   "author": {
-    "name": "kranfix",
-    "email": "frankmoreno1993@gmail.com"
+    "name": "fahad0001",
+    "email": "fahadmir0001@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/kranfix/node-red-contrib-natsio/issues"
+    "url": "https://github.com/fahad0001/node-red-contrib-natsio-tool/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -36,7 +36,7 @@
   },
   "deprecated": false,
   "description": "Nats.io protocol with Node-RED",
-  "homepage": "https://github.com/kranfix/node-red-contrib-natsio#readme",
+  "homepage": "https://github.com/fahad0001/node-red-contrib-natsio-tool#readme",
   "keywords": [
     "node-red",
     "iot",
@@ -47,7 +47,7 @@
   ],
   "license": "MIT",
   "main": "natsio_sub.js",
-  "name": "node-red-contrib-natsio",
+  "name": "node-red-contrib-natsio-tool",
   "node-red": {
     "nodes": {
       "natsio_sub": "natsio_sub.js",
@@ -58,10 +58,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kranfix/node-red-contrib-natsio.git"
+    "url": "git+ssh://git@github.com/fahad0001/node-red-contrib-natsio-tool.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.6.1"
+  "version": "0.0.1"
 }

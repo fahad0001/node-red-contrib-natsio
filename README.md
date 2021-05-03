@@ -1,7 +1,7 @@
 node-red-contrib-nats
 =====================
 
-[![NPM](https://nodei.co/npm/node-red-contrib-natsio.png?compact=true)](https://nodei.co/npm/node-red-contrib-natsio/)
+[![NPM](https://nodei.co/npm/node-red-contrib-natsio.png?compact=true)](https://nodei.co/npm/node-red-contrib-natsio-tool/)
 
 [NATS](http://www.nats.io/) is a pub/sub protocol for IoT with a request/reply functionality.
 
@@ -14,7 +14,7 @@ but with independent development.
 Run the following command in the root directory of your Node-RED install:
 
 ```
-npm i node-red-contrib-natsio
+npm i node-red-contrib-natsio-tool
 ```
 
 Functionality supported and ToDo
@@ -36,7 +36,9 @@ For gnatsd:
 - [x] |-Tabs
 - [x] |-Credentials: user and password
 - [ ] |-Credentials: token
-- [x] |-Don't crash on broker connection error (including node-red starting)
+- [x] |-Don't crash on broker connection error (including node-red 
+- [x] |-Dynamic Subject List as an Input Added
+starting)
 - [ ] |-security: TLS
 - [ ] |-Configurable reconnecting options
 - [ ] Improve documentation
