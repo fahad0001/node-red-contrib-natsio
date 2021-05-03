@@ -1,7 +1,7 @@
 node-red-contrib-nats
 =====================
 
-[![NPM](https://nodei.co/npm/node-red-contrib-natsio.png?compact=true)](https://nodei.co/npm/node-red-contrib-natsio-tool/)
+[![NPM](https://nodei.co/npm/node-red-contrib-natsio-tool.png?compact=true)](https://nodei.co/npm/node-red-contrib-natsio-tool/)
 
 [NATS](http://www.nats.io/) is a pub/sub protocol for IoT with a request/reply functionality.
 
@@ -42,7 +42,3 @@ starting)
 - [ ] |-security: TLS
 - [ ] |-Configurable reconnecting options
 - [ ] Improve documentation
-
-For nats-streaming-server:
-
-- This is a future work
