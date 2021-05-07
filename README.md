@@ -1,5 +1,5 @@
-node-red-contrib-nats
-=====================
+node-red-contrib-nats-tool
+==========================
 
 [![NPM](https://nodei.co/npm/node-red-contrib-natsio-tool.png?compact=true)](https://nodei.co/npm/node-red-contrib-natsio-tool/)
 

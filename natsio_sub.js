@@ -7,9 +7,20 @@ module.exports = function(RED) {
     node.server = RED.nodes.getNode(n.server);
     node.server.setMaxListeners(node.server.getMaxListeners() + 1)
     node.sids = [];
+    node.globalSubjects = [];
 
     node.on('input', (msg) => {
       var subjects = msg.payload.subjects || [];
+      subjects = subjects.reduce((acc, curr) => {
+        if(!node.globalSubjects.some(sub => sub === curr)) {
+          acc.push(curr);
+        }
+        return acc;
+      }, []);
+
+      node.globalSubjects.push(...subjects);
+      msg.payload = {global: node.globalSubjects, subject: subjects};
+      node.send(msg);
       if(subjects.length > 0) {
           subjects.forEach(sub => {
             node.sids.push(node.server.nc.subscribe(sub,
@@ -21,7 +32,7 @@ module.exports = function(RED) {
           })
           msg.payload.status = "New Subject List Updated";
           node.send(msg);
-      } else {
+      } else if(node.globalSubjects.length <= 0) {
         node.sids.push(node.server.nc.subscribe(n.subject,
           {max: n.maxWanted,queue:n.queue},
           (message, replyTo, subject) => {
@@ -48,8 +59,8 @@ module.exports = function(RED) {
         node.sids.forEach(sid => {
           node.server.nc.unsubscribe(sid);
         });
+        node.send({payload: node.sids, topic: subject, replyTo: replyTo});
       }
-      node.server.setMaxListeners(node.server.getMaxListeners() - 1)
     });
   }
   RED.nodes.registerType("natsio-sub",NatsSubNode);
